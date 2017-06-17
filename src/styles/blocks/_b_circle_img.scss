@@ -1,0 +1,21 @@
+.b-circle-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  &.sm {
+      width: 180px;
+      height: 180px;
+
+    img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}

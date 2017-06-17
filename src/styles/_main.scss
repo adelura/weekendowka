@@ -1,0 +1,20 @@
+body {
+  background: $white;
+  color: $cod-gray;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+
+  @media screen and (min-width: 64em) {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+
+.clearFix {
+  clear: both;
+}
+
+.right {
+  float: right;
+}

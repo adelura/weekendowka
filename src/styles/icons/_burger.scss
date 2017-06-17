@@ -1,0 +1,19 @@
+.burger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+
+  &:hover {
+    div {
+      background-color: $conifer;
+    }
+  }
+
+  div {
+    border-radius: 5px;
+    width: 35px;
+    height: 4px;
+    background-color: $white;
+    margin: 6px 0;
+  }
+}

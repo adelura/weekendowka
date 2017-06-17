@@ -1,0 +1,38 @@
+.horses {
+  .b-circle-img {
+    margin: 0 auto;
+  }
+}
+
+.horses_container {
+  text-align: center;
+}
+
+.horses_el {
+  text-align: center;
+  margin: 0 auto 50px auto;
+  max-width: 300px;
+
+  @media screen and (min-width: 35.5em) {
+    max-width: 290px;
+    display: inline-block;
+    margin: 0 6px 30px 6px;
+  }
+
+  @media screen and (min-width: 48em) {
+    margin: 0 25px 40px 25px;
+  }
+
+  @media screen and (min-width: 64em) {
+    margin: 0px 20px 60px 20px;
+  }
+
+  h3 {
+    margin: 15px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
