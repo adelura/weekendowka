@@ -107,11 +107,28 @@
 			</div>
 		</article>
 
-		<article class="section contact">
-			<div class="wrapper">
-				<h2>Kontakt</h2>
-			</div>
+		<article class="section m-last contact">
+			<h2>Kontakt</h2>
+			<address class="contact_address">
+				<a href="tel:+48567876542">+48567876542</a><br>
+				Wólka Magierowa 20<br>26-420 Wólka Magierowa<br>51.601135, 20.563592
+			</address>
+				<div id="map"></div>
 		</article>
     <script src="./bundle.js"></script>
+	<script>
+      function initMap() {
+        var uluru = { lat: 51.601135, lng: 20.563592 };
+        var map = new google.maps.Map( document.getElementById('map'), {
+          zoom: 12,
+          center: uluru
+        } );
+        var marker = new google.maps.Marker( {
+          position: uluru,
+          map: map
+        } );
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkH3BVD1n8ZAYpJwZ-VCMjJScv2YVPgkc&callback=initMap"> </script>
 	</body>
 </html>
