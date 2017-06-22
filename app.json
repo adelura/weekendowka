@@ -1,7 +1,7 @@
 {
   "name": "weekendowka",
   "scripts": {
-    "postdeploy": "gulp"
+    "postdeploy": "npm install"
   },
   "env": {
   },
