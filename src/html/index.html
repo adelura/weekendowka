@@ -111,7 +111,7 @@
 			<h2>Kontakt</h2>
 			<address class="contact_address">
 				<a href="tel:+48567876542">+48567876542</a><br>
-				Wólka Magierowa 20<br>26-420 Wólka Magierowa<br>51.601135, 20.563592
+				Wólka Magierowa 20<br>26-420 Wólka Magierowa<br>51&deg;36&#39;04.1&quot;N 20&deg;33&#39;48.9&quot;E
 			</address>
 				<div id="map"></div>
 		</article>
@@ -121,7 +121,8 @@
         var uluru = { lat: 51.601135, lng: 20.563592 };
         var map = new google.maps.Map( document.getElementById('map'), {
           zoom: 12,
-          center: uluru
+          center: uluru,
+		  scrollwheel: false
         } );
         var marker = new google.maps.Marker( {
           position: uluru,

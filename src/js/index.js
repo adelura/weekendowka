@@ -3,9 +3,9 @@ var closeNav = document.getElementById( 'close-nav' );
 var sideNav = document.getElementById( 'side-nav' );
 
 openNav.addEventListener( 'click', function() { 
-    sideNav.style.width = '100%';
+    sideNav.classList.add( 'active' );
 } );
 
 closeNav.addEventListener( 'click', function() { 
-    sideNav.style.width = '0px';
+    sideNav.classList.remove( 'active' );
 } );
