@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
+gulp.task('build',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
 
 gulp.task('html', function() {
     return gulp.src('./src/html/*.*')
@@ -43,7 +43,7 @@ gulp.task('startServer', function() {
     connect.server({
         root : './build',
         livereload : true,
-        port : 9001
+        port : 8080
     });
 });
 
