@@ -10,13 +10,13 @@ var gulp = require('gulp'),
 gulp.task('default',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
 
 gulp.task('html', function() {
-    return gulp.src('./src/public/*.*')
+    return gulp.src('./public/*.*')
     .pipe(gulp.dest('./build'));
 });
 
 gulp.task('js', function() {
     return browserify({
-        entries: ['./src/js/index.js']
+        entries: ['./public/app.js']
     })
     .transform(babelify.configure({
         presets : ['es2015']
@@ -28,13 +28,13 @@ gulp.task('js', function() {
 });
 
 gulp.task('styles', function() {
-    gulp.src('./src/styles/**/*.scss')
+    gulp.src('./public/styles/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./build/styles'));
 });
 
 gulp.task('imagemin', () =>
-	gulp.src('./src/images/*')
+	gulp.src('./public/images/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('./build/images'))
 );
@@ -48,8 +48,8 @@ gulp.task('startServer', function() {
 });
 
 gulp.task('watch',function() {
-    gulp.watch('./src/styles/**/*.scss',['styles']);
-    gulp.watch('./src/js/index.js', ['js']);
-    gulp.watch('./src/public/*.*', ['html']);
-    gulp.watch('./src/images/**/*', ['imagemin']);
+    gulp.watch('./public/styles/**/*.scss',['styles']);
+    gulp.watch('./public/app.js', ['js']);
+    gulp.watch('./public/*.*', ['html']);
+    gulp.watch('./public/images/**/*', ['imagemin']);
 });
