@@ -7,10 +7,10 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('build',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
+gulp.task('default',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
 
 gulp.task('html', function() {
-    return gulp.src('./src/html/*.*')
+    return gulp.src('./src/public/*.*')
     .pipe(gulp.dest('./build'));
 });
 
@@ -50,6 +50,6 @@ gulp.task('startServer', function() {
 gulp.task('watch',function() {
     gulp.watch('./src/styles/**/*.scss',['styles']);
     gulp.watch('./src/js/index.js', ['js']);
-    gulp.watch('./src/html/*.*', ['html']);
+    gulp.watch('./src/public/*.*', ['html']);
     gulp.watch('./src/images/**/*', ['imagemin']);
 });
