@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+let gulp = require('gulp'),
     babelify = require('babelify'),
     browserify = require('browserify'),
     connect = require('gulp-connect'),
@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default',['html', 'js', 'imagemin', 'styles', 'startServer', 'watch']);
+gulp.task('build',['html', 'js', 'imagemin', 'styles']);
+gulp.task('default',['build', 'startServer', 'watch']);
 
 gulp.task('html', function() {
     return gulp.src('./public/*.*')
